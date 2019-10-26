@@ -1,4 +1,5 @@
 import React from "react";
+import poll from "../api/poll";
 
 class Form extends React.Component {
   state = {
