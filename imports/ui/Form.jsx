@@ -20,7 +20,14 @@ class Form extends React.Component {
   };
   handleSubmit = evt => {
     evt.preventDefault();
-    console.log("submit");
+    const { question, answer1, answer2, answer3 } = this.state;
+    this.props.onCreatePoll({
+      createdAt: new Date(),
+      question,
+      answer1,
+      answer2,
+      answer3
+    });
   };
   render() {
     return (
